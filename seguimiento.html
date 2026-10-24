@@ -3,99 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulta el estado de una reparación de ejemplo en Taller Mecánico EDR.">
+    <meta name="description" content="Consulta el estado de reparación de tu vehículo en Taller Mecánico EDR.">
     <title>Seguimiento | Taller Mecánico EDR</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">TALLER MECÁNICO EDR</a>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="cotizador.html">Cotizador</a></li>
-                <li><a href="seguimiento.html">Seguimiento</a></li>
-                <li><a href="taller.html">Nuestro taller</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="encabezado-seguimiento">
+        <h1>Taller Mecánico EDR</h1>
+        <p>Pasión por la mecánica, compromiso con las personas.</p>
     </header>
 
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="cotizador.html">Cotizador</a>
+        <a href="seguimiento.html">Seguimiento</a>
+        <a href="taller.html">Nuestro taller</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
     <main>
-        <section>
-            <p>ATENCIÓN Y CONFIANZA PARA TU AUTOMÓVIL</p>
-            <h1>Seguimiento de reparaciones</h1>
-            <p>
-                Consulta el estado de tu vehículo ingresando el folio
-                que te proporcionó el taller.
-            </p>
+        <section class="introduccion-seguimiento">
+            <h2>Seguimiento de tu vehículo</h2>
+            <p>Consulta el estado de reparación de tu automóvil ingresando el folio que te proporcionó el taller.</p>
         </section>
 
-        <section>
-            <h2>Consulta tu reparación</h2>
-            <p>
-                Escribe uno de los folios de demostración para conocer
-                el estado de la reparación.
-            </p>
+        <section class="contenido-seguimiento">
+            <div class="imagen-seguimiento">
+                <img src="img/freno.png" alt="Interior de un automóvil en revisión">
 
-            <form id="formulario-seguimiento">
-                <label for="folio">Folio de reparación:</label>
-                <input
-                    type="text"
-                    id="folio"
-                    name="folio"
-                    placeholder="Ej. EDR-001"
-                    required
-                >
+                <h2>Tu vehículo, en buenas manos</h2>
+                <p>Trabajamos para ofrecerte un servicio honesto y mantenerte informado sobre el proceso de reparación.</p>
 
-                <button type="submit">Consultar estado</button>
-            </form>
+                <img src="img/tablita.png" alt="Herramientas del taller mecánico organizadas">
+            </div>
 
-            <div id="resultado-seguimiento" aria-live="polite"></div>
+            <div class="consulta-seguimiento">
+                <h2>Consulta tu folio</h2>
+                <p>Ingresa el número de seguimiento que recibiste en el taller.</p>
+
+                <form id="formularioSeguimiento">
+                    <div class="campo-formulario">
+                        <label for="folio">Número de folio</label>
+                        <input type="text" id="folio" name="folio" required placeholder="Ej. EDR-001">
+                    </div>
+
+                    <button type="submit">Consultar estado</button>
+                </form>
+
+                <div id="resultadoSeguimiento" aria-live="polite"></div>
+            </div>
         </section>
 
-        <section>
-            <h2>Ejemplos de seguimiento</h2>
-            <p>
-                Puedes utilizar cualquiera de estos folios para probar
-                el funcionamiento de la página.
-            </p>
+        <section class="ejemplos-seguimiento">
+            <h2>Folios de demostración</h2>
+            <p>Prueba el funcionamiento de la página con estos registros ficticios.</p>
 
-            <article>
-                <h3>Mini Cooper</h3>
-                <p><strong>Folio:</strong> EDR-001</p>
-                <p><strong>Estado:</strong> En diagnóstico</p>
-                <p>Se está realizando una revisión para identificar las posibles fallas.</p>
-            </article>
+            <div class="lista-folios">
+                <article>
+                    <h3>EDR-001</h3>
+                    <p>Mini Cooper</p>
+                    <span>En diagnóstico</span>
+                </article>
 
-            <article>
-                <h3>Volkswagen Sedán (Vochito)</h3>
-                <p><strong>Folio:</strong> EDR-002</p>
-                <p><strong>Estado:</strong> En reparación</p>
-                <p>El vehículo se encuentra en la etapa de reparación.</p>
-            </article>
+                <article>
+                    <h3>EDR-002</h3>
+                    <p>Volkswagen Sedán</p>
+                    <span>En reparación</span>
+                </article>
 
-            <article>
-                <h3>Ford Fiesta</h3>
-                <p><strong>Folio:</strong> EDR-003</p>
-                <p><strong>Estado:</strong> Listo para entregar</p>
-                <p>La reparación de demostración ha finalizado.</p>
-            </article>
-        </section>
-
-        <section>
-            <h2>¿Necesitas más información?</h2>
-            <p>
-                Si tienes dudas sobre una reparación, puedes comunicarte
-                con el taller.
-            </p>
-            <a href="contacto.html">Consultar información de contacto</a>
+                <article>
+                    <h3>EDR-003</h3>
+                    <p>Ford Fiesta</p>
+                    <span>Listo para entregar</span>
+                </article>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Taller Mecánico EDR. Todos los derechos reservados.</p>
+        <p>
+            &copy; 2026 Taller Mecánico EDR.
+            Todos los derechos reservados.
+        </p>
+
         <p>Pasión por la mecánica, compromiso con las personas.</p>
     </footer>
 
