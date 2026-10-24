@@ -1,0 +1,805 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+/* General */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 60vh;
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #c51f30;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+h3 {
+    color: #222222;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Encabezado */
+
+header {
+    background-color: #171717;
+    color: white;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding: 20px;
+    border-bottom: 3px solid #c51f30;
+}
+
+header img {
+    display: block;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0;
+}
+
+header h1 {
+    grid-column: 2;
+    grid-row: 1;
+    color: #e32636;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+header p {
+    grid-column: 2;
+    grid-row: 2;
+    color: #eeeeee;
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* Menú */
+
+nav {
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #e32636;
+}
+
+/* Botones */
+
+.boton-inicio {
+    display: inline-block;
+    background-color: #e32636;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.boton-inicio:hover {
+    background-color: #a81725;
+}
+
+button {
+    background-color: #e32636;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #a81725;
+}
+
+/* Inicio */
+
+.portada-inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+.texto-portada {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+}
+
+.texto-portada h2 {
+    color: #222222;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.texto-portada p {
+    color: #444444;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.imagen-portada {
+    flex: 1;
+    min-width: 0;
+}
+
+.imagen-portada img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Datos */
+
+.experiencia-inicio {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 8px;
+}
+
+.experiencia-inicio div {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    padding: 12px;
+}
+
+.experiencia-inicio h2 {
+    color: #e32636;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.experiencia-inicio p {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+/* Historia */
+
+.historia-inicio {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+.etiqueta-inicio {
+    color: #c51f30;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.historia-inicio h2 {
+    color: #222222;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.historia-inicio p {
+    color: #444444;
+    font-size: 17px;
+}
+
+.enlace-inicio {
+    display: inline-block;
+    color: #c51f30;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace-inicio:hover {
+    text-decoration: underline;
+}
+
+/* Cierre */
+
+.cierre-inicio {
+    background-color: #262626;
+    color: white;
+    text-align: center;
+    padding: 35px 25px;
+    border-radius: 8px;
+}
+
+.cierre-inicio h2 {
+    color: white;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.cierre-inicio p {
+    color: #eeeeee;
+    margin-bottom: 20px;
+}
+
+/* Introducciones */
+
+.introduccion-servicios,
+.introduccion-cotizador,
+.introduccion-seguimiento,
+.introduccion-taller,
+.introduccion-contacto {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+/* Servicios */
+
+.galeria-servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px auto;
+}
+
+.galeria-servicios img {
+    display: block;
+    width: 45%;
+    max-width: 400px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.lista-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta-servicio {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 250px;
+    min-width: 200px;
+    max-width: 360px;
+    border-bottom: 4px solid #e32636;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+.emoji-servicio {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.solicitar-servicio {
+    background-color: #202020;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.solicitar-servicio h2 {
+    color: white;
+}
+
+.solicitar-servicio a {
+    display: inline-block;
+    background-color: #e32636;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.solicitar-servicio a:hover {
+    background-color: #a81725;
+}
+
+/* Cotizador */
+
+.contenido-cotizador {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.imagenes-cotizador {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 450px;
+}
+
+.imagenes-cotizador img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 20px;
+}
+
+.texto-imagen-cotizador {
+    margin: 0 0 20px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.formulario-cotizador {
+    flex: 1.5;
+    min-width: 0;
+}
+
+/* Formularios */
+
+form {
+    margin-top: 20px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+}
+
+.campo-formulario label,
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: white;
+    color: #222222;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #c51f30;
+    outline-offset: 1px;
+}
+
+#mensajeCotizador,
+#resultadoSeguimiento {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+    background-color: white;
+}
+
+/* Tarjetas */
+
+.tarjetas-servicios,
+.contenedor-servicios,
+.tarjetas-confianza,
+.contenedor-valores,
+.lista-folios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjetas-servicios article,
+.contenedor-servicios article,
+.tarjetas-confianza article,
+.contenedor-valores article,
+.lista-folios article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 250px;
+    min-width: 200px;
+    max-width: 360px;
+    border-bottom: 4px solid #e32636;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+.tarjetas-servicios img,
+.contenedor-servicios img,
+.tarjetas-confianza img {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: 115px;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+}
+
+.lista-folios span {
+    display: inline-block;
+    background-color: #eeeeee;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Taller */
+
+.introduccion-taller {
+    margin-bottom: 30px;
+}
+
+.historia-taller,
+.filosofia-taller,
+.contenido-contacto,
+.contenido-seguimiento {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000015;
+}
+
+.imagen-historia,
+.texto-historia,
+.texto-filosofia,
+.imagen-filosofia,
+.informacion-contacto,
+.imagenes-contacto,
+.imagen-seguimiento,
+.consulta-seguimiento {
+    flex: 1;
+    min-width: 0;
+}
+
+.imagen-historia img,
+.imagen-filosofia img,
+.imagenes-contacto img,
+.imagen-seguimiento img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.contenedor-valores {
+    margin-top: 25px;
+}
+
+.contenedor-valores article {
+    max-width: none;
+}
+
+/* Contacto */
+
+.introduccion-contacto,
+.introduccion-seguimiento {
+    margin-bottom: 30px;
+}
+
+.contenido-contacto,
+.contenido-seguimiento {
+    margin-bottom: 30px;
+}
+
+.invitacion-taller,
+.mensaje-contacto {
+    background-color: #202020;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.invitacion-taller h2,
+.mensaje-contacto h2 {
+    color: white;
+}
+
+.invitacion-taller a,
+.mensaje-contacto a {
+    display: inline-block;
+    background-color: #e32636;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.invitacion-taller a:hover,
+.mensaje-contacto a:hover {
+    background-color: #a81725;
+}
+
+/* Enlaces */
+
+a {
+    overflow-wrap: break-word;
+}
+
+main a {
+    color: #c51f30;
+}
+
+/* Pie */
+
+footer {
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Celular */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    header img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    header p {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .portada-inicio {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px auto;
+        padding: 18px;
+    }
+
+    .texto-portada {
+        padding: 5px;
+    }
+
+    .texto-portada h2 {
+        font-size: 30px;
+    }
+
+    .imagen-portada img {
+        max-width: 100%;
+        height: 230px;
+    }
+
+    .experiencia-inicio {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .experiencia-inicio div {
+        padding: 12px;
+    }
+
+    .historia-inicio {
+        margin: 25px auto;
+        padding: 20px;
+    }
+
+    .historia-inicio h2 {
+        font-size: 26px;
+    }
+
+    .galeria-servicios img {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+    }
+
+    .contenido-cotizador {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imagenes-cotizador {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .imagenes-cotizador img {
+        height: 220px;
+        margin-bottom: 20px;
+    }
+
+    .texto-imagen-cotizador {
+        margin-bottom: 20px;
+    }
+
+    .formulario-cotizador {
+        width: 100%;
+    }
+
+    .tarjetas-servicios img,
+    .contenedor-servicios img,
+    .tarjetas-confianza img {
+        max-width: 160px;
+        height: 105px;
+    }
+
+    .historia-taller,
+    .filosofia-taller,
+    .contenido-contacto,
+    .contenido-seguimiento {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .imagen-historia img,
+    .imagen-filosofia img,
+    .imagenes-contacto img,
+    .imagen-seguimiento img {
+        height: auto;
+        max-height: none;
+    }
+
+    .contenedor-valores,
+    .lista-folios {
+        flex-direction: column;
+    }
+
+    .contenedor-valores article,
+    .lista-folios article {
+        max-width: none;
+        width: 100%;
+    }
+
+    .introduccion-contacto,
+    .introduccion-taller,
+    .introduccion-seguimiento,
+    .introduccion-servicios,
+    .introduccion-cotizador {
+        padding: 20px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    .cierre-inicio {
+        padding: 30px 18px;
+    }
+
+    .cierre-inicio h2 {
+        font-size: 23px;
+    }
+
+    footer {
+        padding: 20px 12px;
+    }
+}
