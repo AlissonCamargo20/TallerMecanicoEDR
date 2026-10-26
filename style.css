@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f2f2f2;
     color: #222222;
     line-height: 1.6;
@@ -842,4 +842,26 @@ footer p {
     footer {
         padding: 20px 12px;
     }
+}
+
+/* Tipografía y presentación */
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    color: #333333;
+}
+
+a {
+    transition: color 0.2s;
+}
+
+button,
+.boton-inicio {
+    font-family: 'Poppins', sans-serif;
 }
