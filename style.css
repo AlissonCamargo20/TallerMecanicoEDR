@@ -641,3 +641,205 @@ textarea:focus {
 .mensaje-contacto h2 {
     color: white;
 }
+
+/* Enlaces */
+
+a {
+    overflow-wrap: break-word;
+}
+
+main a {
+    color: #c51f30;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* Celular */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+
+    header img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    header p {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .portada-inicio {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px auto;
+        padding: 18px;
+    }
+
+    .texto-portada {
+        padding: 5px;
+    }
+
+    .texto-portada h2 {
+        font-size: 30px;
+    }
+
+    .imagen-portada img {
+        max-width: 100%;
+        height: 230px;
+    }
+
+    .experiencia-inicio,
+    .historia-taller,
+    .filosofia-taller,
+    .contenido-contacto,
+    .contenido-seguimiento,
+    .contenedor-valores,
+    .lista-folios,
+    .contenido-cotizador {
+        flex-direction: column;
+    }
+
+    .experiencia-inicio {
+        gap: 5px;
+    }
+
+    .experiencia-inicio div {
+        padding: 12px;
+    }
+
+    .historia-inicio {
+        margin: 25px auto;
+        padding: 20px;
+    }
+
+    .historia-inicio h2 {
+        font-size: 26px;
+    }
+
+    .galeria-servicios img {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+    }
+
+    .contenido-cotizador {
+        gap: 20px;
+    }
+
+    .imagenes-cotizador {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .imagenes-cotizador img {
+        height: 220px;
+        margin-bottom: 20px;
+    }
+
+    .texto-imagen-cotizador {
+        margin-bottom: 20px;
+    }
+
+    .formulario-cotizador {
+        width: 100%;
+    }
+
+    .tarjetas-servicios img,
+    .contenedor-servicios img,
+    .tarjetas-confianza img {
+        max-width: 160px;
+        height: 105px;
+    }
+
+    .historia-taller,
+    .filosofia-taller,
+    .contenido-contacto,
+    .contenido-seguimiento {
+        padding: 18px;
+    }
+
+    .imagen-historia img,
+    .imagen-filosofia img,
+    .imagenes-contacto img,
+    .imagen-seguimiento img {
+        height: auto;
+        max-height: none;
+    }
+
+    .contenedor-valores article,
+    .lista-folios article {
+        max-width: none;
+        width: 100%;
+    }
+
+    .introduccion-contacto,
+    .introduccion-taller,
+    .introduccion-seguimiento,
+    .introduccion-servicios,
+    .introduccion-cotizador {
+        padding: 20px;
+    }
+
+    .mapa-taller {
+        padding: 18px;
+    }
+
+    .mapa-taller h2 {
+        font-size: 26px;
+    }
+
+    .mapa-taller iframe {
+        height: 280px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    .cierre-inicio {
+        padding: 30px 18px;
+    }
+
+    .cierre-inicio h2 {
+        font-size: 23px;
+    }
+
+    footer {
+        padding: 20px 12px;
+    }
+}
