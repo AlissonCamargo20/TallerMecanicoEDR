@@ -23,9 +23,10 @@ h3 {
 
 p {
     overflow-wrap: break-word;
+    margin-bottom: 15px;
 }
 
-/* General */
+/* GENERAL */
 
 main {
     width: 90%;
@@ -49,11 +50,7 @@ h3 {
     margin-bottom: 10px;
 }
 
-p {
-    margin-bottom: 15px;
-}
-
-/* Encabezado */
+/* ENCABEZADO */
 
 header {
     background-color: #171717;
@@ -100,7 +97,7 @@ header p {
     line-height: 1.3;
 }
 
-/* Menú */
+/* MENÚ */
 
 nav {
     background-color: #262626;
@@ -124,7 +121,7 @@ nav a:hover {
     background-color: #e32636;
 }
 
-/* Botones */
+/* BOTONES */
 
 .boton-inicio {
     display: inline-block;
@@ -138,7 +135,8 @@ nav a:hover {
     transition: background-color 0.2s;
 }
 
-.boton-inicio:hover {
+.boton-inicio:hover,
+button:hover {
     background-color: #a81725;
 }
 
@@ -153,12 +151,7 @@ button {
     transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #a81725;
-}
-
-/* Inicio */
-/* Bootstrap organiza las columnas internas de la portada */
+/* INICIO */
 
 .portada-inicio {
     margin: 30px auto;
@@ -200,7 +193,7 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Datos */
+/* DATOS */
 
 .experiencia-inicio {
     display: flex;
@@ -231,7 +224,7 @@ button:hover {
     margin-bottom: 0;
 }
 
-/* Historia de inicio */
+/* HISTORIA DE INICIO */
 
 .historia-inicio {
     max-width: 900px;
@@ -272,7 +265,7 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Cierre */
+/* CIERRE */
 
 .cierre-inicio {
     background-color: #262626;
@@ -293,7 +286,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/* Introducciones */
+/* INTRODUCCIONES */
 
 .introduccion-servicios,
 .introduccion-cotizador,
@@ -307,7 +300,7 @@ button:hover {
     box-shadow: 0 2px 8px #00000015;
 }
 
-/* Servicios */
+/* SERVICIOS */
 
 .galeria-servicios {
     margin: 25px auto;
@@ -337,6 +330,11 @@ button:hover {
 }
 
 .tarjeta-servicio {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 14px;
+    align-items: start;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -348,9 +346,28 @@ button:hover {
 }
 
 .emoji-servicio {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     display: block;
     font-size: 30px;
-    margin-bottom: 10px;
+    line-height: 1.3;
+    text-align: center;
+    margin: 2px 0 0;
+}
+
+.tarjeta-servicio h2,
+.tarjeta-servicio h3 {
+    grid-column: 2;
+    text-align: left;
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+}
+
+.tarjeta-servicio p {
+    grid-column: 2;
+    text-align: left;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .solicitar-servicio {
@@ -379,7 +396,7 @@ button:hover {
     background-color: #a81725;
 }
 
-/* Cotizador */
+/* COTIZADOR */
 
 .contenido-cotizador {
     width: 100%;
@@ -408,7 +425,7 @@ button:hover {
     object-fit: cover;
     object-position: center;
     border-radius: 12px;
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
     box-shadow: 0 4px 12px #00000018;
 }
 
@@ -432,7 +449,7 @@ button:hover {
     min-width: 0;
 }
 
-/* Formularios */
+/* FORMULARIOS */
 
 form {
     width: 100%;
@@ -476,6 +493,7 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"] {
     width: 100%;
+    max-width: 100%;
     min-width: 0;
 }
 
@@ -500,7 +518,7 @@ textarea:focus {
     background-color: white;
 }
 
-/* Tarjetas */
+/* TARJETAS */
 
 .tarjetas-servicios,
 .contenedor-servicios,
@@ -549,8 +567,7 @@ textarea:focus {
     font-weight: bold;
 }
 
-/* Taller */
-/* Los contenedores usan Bootstrap; no se fuerza flex sobre ellos */
+/* TALLER Y CONTACTO */
 
 .historia-taller,
 .filosofia-taller,
@@ -595,7 +612,7 @@ textarea:focus {
     height: auto;
     object-fit: contain;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
 }
 
 .contenedor-valores {
@@ -605,8 +622,6 @@ textarea:focus {
 .contenedor-valores article {
     max-width: none;
 }
-
-/* Contacto */
 
 .mapa-taller {
     width: 100%;
@@ -676,7 +691,7 @@ textarea:focus {
     background-color: #a81725;
 }
 
-/* Enlaces */
+/* ENLACES */
 
 a {
     overflow-wrap: break-word;
@@ -686,7 +701,7 @@ main a {
     color: #c51f30;
 }
 
-/* Pie */
+/* PIE DE PÁGINA */
 
 footer {
     background-color: #171717;
@@ -701,7 +716,7 @@ footer p {
     color: #eeeeee;
 }
 
-/* Pantallas medianas */
+/* PANTALLAS MEDIANAS */
 
 @media (max-width: 991px) {
     .imagenes-cotizador img {
@@ -713,14 +728,15 @@ footer p {
     }
 }
 
-/* Celulares y pantallas pequeñas */
+/* CELULARES */
 
 @media (max-width: 768px) {
     header {
         display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        gap: 0;
+        gap: 8px;
         padding: 18px 12px;
     }
 
@@ -731,12 +747,14 @@ footer p {
     }
 
     header h1 {
+        width: 100%;
         font-size: clamp(23px, 6vw, 30px);
         text-align: center;
         line-height: 1.2;
     }
 
     header p {
+        width: 100%;
         font-size: 15px;
         text-align: center;
         margin-top: 5px;
@@ -746,6 +764,7 @@ footer p {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         gap: 5px;
         padding: 8px;
     }
@@ -758,6 +777,7 @@ footer p {
 
     main {
         width: 94%;
+        max-width: 100%;
         margin: 20px auto;
     }
 
@@ -765,31 +785,48 @@ footer p {
         font-size: 24px;
     }
 
+    /* PORTADA CENTRADA */
+
     .portada-inicio {
         margin: 20px auto;
         padding: 16px;
+        text-align: center;
     }
 
     .texto-portada {
         padding: 5px;
+        text-align: center;
     }
 
     .texto-portada h2 {
         font-size: clamp(26px, 7vw, 32px);
+        text-align: center;
     }
 
     .texto-portada p {
         font-size: 16px;
+        text-align: center;
     }
 
     .imagen-portada img {
         width: 100%;
-        max-width: 100%;
-        height: 230px;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
     }
+
+    .texto-portada .boton-inicio {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    /* ESTADÍSTICAS */
 
     .experiencia-inicio {
         flex-direction: column;
+        align-items: center;
         gap: 5px;
         padding: 14px;
     }
@@ -797,34 +834,48 @@ footer p {
     .experiencia-inicio div {
         width: 100%;
         padding: 12px;
+        text-align: center;
     }
 
     .experiencia-inicio h2 {
         font-size: 27px;
     }
 
+    /* HISTORIA */
+
     .historia-inicio {
         margin: 25px auto;
         padding: 20px;
+        text-align: center;
     }
 
     .historia-inicio h2 {
         font-size: 26px;
+        text-align: center;
     }
 
     .historia-inicio p {
         font-size: 16px;
+        text-align: center;
     }
 
     .cierre-inicio {
         padding: 28px 16px;
+        text-align: center;
     }
 
     .cierre-inicio h2 {
         font-size: 23px;
     }
 
-    /* Servicios */
+    .cierre-inicio .boton-inicio {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin: 18px auto;
+    }
+
+    /* GALERÍA DE SERVICIOS */
 
     .galeria-servicios {
         margin: 20px auto;
@@ -833,24 +884,68 @@ footer p {
     .galeria-servicios img {
         width: 100%;
         height: 190px;
+        object-fit: cover;
     }
 
     .lista-servicios {
+        flex-direction: column;
+        align-items: stretch;
         gap: 15px;
     }
 
+    /* EMOJI A LA IZQUIERDA, TEXTO A LA DERECHA */
+
     .tarjeta-servicio {
+        display: grid;
+        grid-template-columns: 38px minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        column-gap: 12px;
+        align-items: start;
         flex: 1 1 100%;
         width: 100%;
-        max-width: none;
+        max-width: 100%;
         min-width: 0;
+        padding: 20px 16px;
+        text-align: left;
+    }
+
+    .tarjeta-servicio .emoji-servicio {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        font-size: 27px;
+        line-height: 1.3;
+        margin: 2px 0 0;
+        text-align: center;
+    }
+
+    .tarjeta-servicio h2,
+    .tarjeta-servicio h3 {
+        grid-column: 2;
+        font-size: 21px;
+        text-align: left;
+        margin: 0 0 8px;
+    }
+
+    .tarjeta-servicio p {
+        grid-column: 2;
+        text-align: left;
+        margin-bottom: 0;
+        line-height: 1.55;
     }
 
     .solicitar-servicio {
         padding: 24px 16px;
+        text-align: center;
     }
 
-    /* Tarjetas y valores */
+    .solicitar-servicio a {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin: 18px auto 0;
+    }
+
+    /* TARJETAS Y VALORES */
 
     .tarjetas-servicios,
     .contenedor-servicios,
@@ -858,6 +953,7 @@ footer p {
     .contenedor-valores,
     .lista-folios {
         flex-direction: column;
+        align-items: center;
         gap: 15px;
     }
 
@@ -868,23 +964,28 @@ footer p {
     .lista-folios article {
         flex: 1 1 auto;
         width: 100%;
-        max-width: none;
+        max-width: 100%;
         min-width: 0;
+        text-align: center;
     }
 
     .tarjetas-servicios img,
     .contenedor-servicios img,
     .tarjetas-confianza img {
+        display: block;
         max-width: 180px;
         height: 115px;
+        margin: 0 auto 15px;
     }
 
-    /* Taller, contacto y seguimiento */
+    /* TALLER Y CONTACTO */
 
     .historia-taller,
     .filosofia-taller,
     .contenido-contacto,
     .contenido-seguimiento {
+        width: 100%;
+        max-width: 100%;
         padding: 16px;
     }
 
@@ -896,6 +997,15 @@ footer p {
         --bs-gutter-y: 1rem;
     }
 
+    .texto-historia,
+    .texto-filosofia,
+    .informacion-contacto,
+    .consulta-seguimiento {
+        min-width: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
     .texto-historia p,
     .texto-filosofia p {
         text-align: left;
@@ -905,16 +1015,34 @@ footer p {
     .imagen-filosofia img,
     .imagenes-contacto img,
     .imagen-seguimiento img {
+        display: block;
         width: 100%;
+        max-width: 450px;
         height: auto;
         max-height: none;
         object-fit: contain;
+        margin: 0 auto 18px;
     }
 
-    /* Cotizador */
+    .invitacion-taller,
+    .mensaje-contacto {
+        padding: 24px 16px;
+        text-align: center;
+    }
+
+    .invitacion-taller a,
+    .mensaje-contacto a {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        margin: 18px auto;
+    }
+
+    /* COTIZADOR */
 
     .contenido-cotizador {
         width: 100%;
+        max-width: 100%;
     }
 
     .contenido-cotizador > .row {
@@ -926,27 +1054,30 @@ footer p {
     .formulario-cotizador {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
     }
 
     .imagenes-cotizador img {
         width: 100%;
-        max-width: 100%;
-        height: 230px;
-        margin-bottom: 15px;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto 15px;
     }
 
     .texto-imagen-cotizador {
         padding: 16px;
+        text-align: center;
     }
 
     .texto-imagen-cotizador h2 {
         font-size: 23px;
     }
 
-    /* Formularios */
+    /* FORMULARIOS */
 
     form {
         width: 100%;
+        min-width: 0;
         padding: 16px;
     }
 
@@ -966,23 +1097,30 @@ footer p {
         max-width: 100%;
     }
 
-    button {
+    form button {
+        display: block;
         max-width: 100%;
+        margin: 15px auto 0;
     }
 
-    /* Mapa */
+    /* MAPA */
 
     .mapa-taller {
         width: 100%;
+        max-width: 100%;
         padding: 16px;
+        text-align: center;
     }
 
     .mapa-taller iframe {
+        display: block;
         width: 100%;
+        max-width: 100%;
         height: 280px;
+        margin: 0 auto;
     }
 
-    /* Introducciones */
+    /* INTRODUCCIONES */
 
     .introduccion-contacto,
     .introduccion-taller,
@@ -990,21 +1128,18 @@ footer p {
     .introduccion-servicios,
     .introduccion-cotizador {
         padding: 20px 16px;
+        text-align: center;
     }
 
-    .invitacion-taller,
-    .mensaje-contacto {
-        padding: 24px 16px;
-    }
-
-    /* Pie */
+    /* PIE */
 
     footer {
         padding: 20px 12px;
+        text-align: center;
     }
 }
 
-/* Teléfonos muy estrechos */
+/* TELÉFONOS PEQUEÑOS */
 
 @media (max-width: 380px) {
     nav {
@@ -1035,5 +1170,16 @@ footer p {
 
     .mapa-taller {
         padding: 12px;
+    }
+
+    .tarjeta-servicio {
+        grid-template-columns: 32px minmax(0, 1fr);
+        column-gap: 10px;
+        padding: 16px 12px;
+    }
+
+    .tarjeta-servicio h2,
+    .tarjeta-servicio h3 {
+        font-size: 19px;
     }
 }
