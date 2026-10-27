@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Solicita una cotización para el servicio de tu automóvil en Taller Mecánico EDR.">
+
     <title>Cotizador | Taller Mecánico EDR</title>
+
+    <!-- Uso Bootstrap para adaptar mi página a diferentes pantallas -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header class="encabezado-cotizador">
         <img src="img/logoEDR.png" alt="Logo de Taller Mecánico EDR">
         <h1>Taller Mecánico EDR</h1>
@@ -24,78 +39,135 @@
     </nav>
 
     <main>
-        <section class="introduccion-cotizador">
-            <h2>Solicita tu cotización</h2>
-            <p>Cuéntanos qué necesita tu automóvil y te orientaremos sobre el servicio adecuado.</p>
+
+        <section class="introduccion-cotizador container-fluid">
+            <div class="container">
+                <h2>Solicita tu cotización</h2>
+                <p>
+                    Cuéntanos qué necesita tu automóvil y te orientaremos
+                    sobre el servicio adecuado.
+                </p>
+            </div>
         </section>
 
-        <section class="contenido-cotizador">
-            <div class="imagenes-cotizador">
-                <img src="img/EDERYKEVIN.png" alt="Personal del Taller Mecánico EDR">
+        <section class="contenido-cotizador container">
+            <div class="row g-3 align-items-stretch">
 
-                <div class="texto-imagen-cotizador">
-                    <h2>Tu auto en buenas manos</h2>
-                    <p>Honestidad y experiencia al servicio de tu auto.</p>
-                    <p>Más de 20 años de experiencia en mecánica automotriz.</p>
+                <div class="imagenes-cotizador col-12 col-lg-6">
+                    <img
+                        src="img/EDERYKEVIN.png"
+                        alt="Personal del Taller Mecánico EDR"
+                        class="img-fluid"
+                    >
+
+                    <div class="texto-imagen-cotizador">
+                        <h2>Tu auto en buenas manos</h2>
+                        <p>Honestidad y experiencia al servicio de tu auto.</p>
+                        <p>Más de 20 años de experiencia en mecánica automotriz.</p>
+                    </div>
+
+                    <img
+                        src="img/escaner.png"
+                        alt="Equipo de diagnóstico automotriz"
+                        class="img-fluid"
+                    >
                 </div>
 
-                <img src="img/escaner.png" alt="Equipo de diagnóstico automotriz">
-            </div>
+                <div class="formulario-cotizador col-12 col-lg-6">
+                    <h2>Datos de tu vehículo</h2>
+                    <p>
+                        Completa el formulario con la información necesaria
+                        para solicitar tu cotización.
+                    </p>
 
-            <div class="formulario-cotizador">
-                <h2>Datos de tu vehículo</h2>
-                <p>Completa el formulario con la información necesaria para solicitar tu cotización.</p>
+                    <form id="formularioCotizador">
+                        <div class="campo-formulario">
+                            <label for="nombre">Nombre completo</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                required
+                                minlength="3"
+                                placeholder="Escribe tu nombre"
+                            >
+                        </div>
 
-                <form id="formularioCotizador">
-                    <div class="campo-formulario">
-                        <label for="nombre">Nombre completo</label>
-                        <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Escribe tu nombre">
-                    </div>
+                        <div class="campo-formulario">
+                            <label for="telefono">Número de teléfono</label>
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                required
+                                pattern="[0-9 +()-]{10,20}"
+                                placeholder="Ej. 773 123 4567"
+                            >
+                        </div>
 
-                    <div class="campo-formulario">
-                        <label for="telefono">Número de teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" required pattern="[0-9 +()-]{10,20}" placeholder="Ej. 773 123 4567">
-                    </div>
+                        <div class="campo-formulario">
+                            <label for="vehiculo">Marca y modelo del automóvil</label>
+                            <input
+                                type="text"
+                                id="vehiculo"
+                                name="vehiculo"
+                                required
+                                placeholder="Ej. Volkswagen Jetta"
+                            >
+                        </div>
 
-                    <div class="campo-formulario">
-                        <label for="vehiculo">Marca y modelo del automóvil</label>
-                        <input type="text" id="vehiculo" name="vehiculo" required placeholder="Ej. Volkswagen Jetta">
-                    </div>
+                        <div class="campo-formulario">
+                            <label for="anio">Año del vehículo</label>
+                            <input
+                                type="number"
+                                id="anio"
+                                name="anio"
+                                min="1950"
+                                max="2026"
+                                required
+                                placeholder="Ej. 2018"
+                            >
+                        </div>
 
-                    <div class="campo-formulario">
-                        <label for="anio">Año del vehículo</label>
-                        <input type="number" id="anio" name="anio" min="1950" max="2026" required placeholder="Ej. 2018">
-                    </div>
+                        <div class="campo-formulario">
+                            <label for="servicio">Servicio que necesitas</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="Mecánica general">Mecánica general</option>
+                                <option value="Afinación de motor">Afinación de motor</option>
+                                <option value="Servicio eléctrico">Servicio eléctrico</option>
+                                <option value="Suspensión">Suspensión</option>
+                                <option value="Revisión de aceite y frenos">Revisión de aceite y frenos</option>
+                                <option value="Mantenimiento preventivo">Mantenimiento preventivo</option>
+                                <option value="Otro servicio">Otro servicio</option>
+                            </select>
+                        </div>
 
-                    <div class="campo-formulario">
-                        <label for="servicio">Servicio que necesitas</label>
-                        <select id="servicio" name="servicio" required>
-                            <option value="">Selecciona un servicio</option>
-                            <option value="Mecánica general">Mecánica general</option>
-                            <option value="Afinación de motor">Afinación de motor</option>
-                            <option value="Servicio eléctrico">Servicio eléctrico</option>
-                            <option value="Suspensión">Suspensión</option>
-                            <option value="Revisión de aceite y frenos">Revisión de aceite y frenos</option>
-                            <option value="Mantenimiento preventivo">Mantenimiento preventivo</option>
-                            <option value="Otro servicio">Otro servicio</option>
-                        </select>
-                    </div>
+                        <div class="campo-formulario">
+                            <label for="descripcion">Describe la falla o el servicio requerido</label>
+                            <textarea
+                                id="descripcion"
+                                name="descripcion"
+                                rows="4"
+                                required
+                                minlength="10"
+                                placeholder="Describe qué le sucede a tu automóvil o qué servicio necesitas"
+                            ></textarea>
+                        </div>
 
-                    <div class="campo-formulario">
-                        <label for="descripcion">Describe la falla o el servicio requerido</label>
-                        <textarea id="descripcion" name="descripcion" rows="4" required minlength="10" placeholder="Describe qué le sucede a tu automóvil o qué servicio necesitas"></textarea>
-                    </div>
+                        <div class="campo-formulario">
+                            <label for="fecha">Fecha preferida para llevar tu vehículo</label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
 
-                    <div class="campo-formulario">
-                        <label for="fecha">Fecha preferida para llevar tu vehículo</label>
-                        <input type="date" id="fecha" name="fecha">
-                    </div>
+                        <button type="submit">Solicitar cotización por WhatsApp</button>
+                        <p id="mensajeCotizador" aria-live="polite"></p>
+                    </form>
+                </div>
 
-                    <button type="submit">Solicitar cotización por WhatsApp</button>
-                    <p id="mensajeCotizador" aria-live="polite"></p>
-                </form>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -108,5 +180,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

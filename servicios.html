@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conoce los servicios de mecánica automotriz de Taller Mecánico EDR.">
+
     <title>Servicios | Taller Mecánico EDR</title>
+
+    <!-- Uso Bootstrap para adaptar mi página a diferentes pantallas -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header class="encabezado-servicios">
         <img src="img/logoEDR.png" alt="Logo de Taller Mecánico EDR">
         <h1>Taller Mecánico EDR</h1>
@@ -24,60 +39,122 @@
     </nav>
 
     <main>
-        <section class="introduccion-servicios">
-            <h2>Nuestros servicios</h2>
-            <p>Honestidad y experiencia al servicio de tu auto.</p>
-            <p>En Taller Mecánico EDR trabajamos con responsabilidad y compromiso para ayudarte a mantener tu vehículo en buenas condiciones.</p>
+
+        <section class="introduccion-servicios container-fluid">
+            <div class="container">
+                <h2>Nuestros servicios</h2>
+                <p>Honestidad y experiencia al servicio de tu auto.</p>
+                <p>
+                    En Taller Mecánico EDR trabajamos con responsabilidad y
+                    compromiso para ayudarte a mantener tu vehículo en buenas condiciones.
+                </p>
+            </div>
         </section>
 
-        <section class="galeria-servicios">
-            <img src="img/motor.png" alt="Motor de automóvil en revisión">
-            <img src="img/EderLuz.png" alt="Mecánico trabajando en un automóvil">
+        <section class="galeria-servicios container">
+            <div class="row justify-content-center align-items-center g-4">
+
+                <div class="col-12 col-md-6">
+                    <img
+                        src="img/motor.png"
+                        alt="Motor de automóvil en revisión"
+                        class="img-fluid"
+                    >
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <img
+                        src="img/EderLuz.png"
+                        alt="Mecánico trabajando en un automóvil"
+                        class="img-fluid"
+                    >
+                </div>
+
+            </div>
         </section>
 
-        <section class="lista-servicios">
-            <article class="tarjeta-servicio">
-                <span class="emoji-servicio">🔧</span>
-                <h2>Mecánica general</h2>
-                <p>Revisión y reparación de los componentes mecánicos para ayudar a mantener tu vehículo en buen estado.</p>
-            </article>
+        <section class="lista-servicios container">
+            <div class="row g-4">
 
-            <article class="tarjeta-servicio">
-                <span class="emoji-servicio">⚙️</span>
-                <h2>Afinación de motor</h2>
-                <p>Mantenimiento del motor para favorecer su funcionamiento y detectar posibles problemas.</p>
-            </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="tarjeta-servicio h-100">
+                        <span class="emoji-servicio">🔧</span>
+                        <h2>Mecánica general</h2>
+                        <p>
+                            Revisión y reparación de los componentes mecánicos
+                            para ayudar a mantener tu vehículo en buen estado.
+                        </p>
+                    </article>
+                </div>
 
-            <article class="tarjeta-servicio">
-                <span class="emoji-servicio">🔋</span>
-                <h2>Servicio eléctrico</h2>
-                <p>Revisión de posibles fallas eléctricas y apoyo en la identificación de problemas del vehículo.</p>
-            </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="tarjeta-servicio h-100">
+                        <span class="emoji-servicio">⚙️</span>
+                        <h2>Afinación de motor</h2>
+                        <p>
+                            Mantenimiento del motor para favorecer su funcionamiento
+                            y detectar posibles problemas.
+                        </p>
+                    </article>
+                </div>
 
-            <article class="tarjeta-servicio">
-                <span class="emoji-servicio">🚘</span>
-                <h2>Suspensión</h2>
-                <p>Revisión de los componentes de la suspensión para detectar fallas que puedan afectar la estabilidad y comodidad al conducir.</p>
-            </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="tarjeta-servicio h-100">
+                        <span class="emoji-servicio">🔋</span>
+                        <h2>Servicio eléctrico</h2>
+                        <p>
+                            Revisión de posibles fallas eléctricas y apoyo en la
+                            identificación de problemas del vehículo.
+                        </p>
+                    </article>
+                </div>
 
-            <article class="tarjeta-servicio">
-                <span class="emoji-servicio">🛑</span>
-                <h2>Revisión de aceite y frenos</h2>
-                <p>Inspección de elementos esenciales para el mantenimiento y funcionamiento seguro de tu automóvil.</p>
-            </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="tarjeta-servicio h-100">
+                        <span class="emoji-servicio">🚘</span>
+                        <h2>Suspensión</h2>
+                        <p>
+                            Revisión de los componentes de la suspensión para
+                            detectar fallas que puedan afectar la estabilidad
+                            y comodidad al conducir.
+                        </p>
+                    </article>
+                </div>
 
-            <article class="tarjeta-servicio">
-                <span class="emoji-servicio">🧰</span>
-                <h2>Mantenimiento preventivo</h2>
-                <p>Revisiones periódicas para identificar posibles problemas y ayudar a conservar tu vehículo en buenas condiciones.</p>
-            </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="tarjeta-servicio h-100">
+                        <span class="emoji-servicio">🛑</span>
+                        <h2>Revisión de aceite y frenos</h2>
+                        <p>
+                            Inspección de elementos esenciales para el mantenimiento
+                            y funcionamiento seguro de tu automóvil.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="tarjeta-servicio h-100">
+                        <span class="emoji-servicio">🧰</span>
+                        <h2>Mantenimiento preventivo</h2>
+                        <p>
+                            Revisiones periódicas para identificar posibles
+                            problemas y ayudar a conservar tu vehículo
+                            en buenas condiciones.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
         </section>
 
-        <section class="solicitar-servicio">
-            <h2>¿Necesitas revisar tu automóvil?</h2>
-            <p>Cuéntanos qué necesita tu vehículo y solicita una cotización.</p>
-            <a href="cotizador.html">Solicitar cotización</a>
+        <section class="solicitar-servicio container-fluid">
+            <div class="container">
+                <h2>¿Necesitas revisar tu automóvil?</h2>
+                <p>Cuéntanos qué necesita tu vehículo y solicita una cotización.</p>
+                <a href="cotizador.html">Solicitar cotización</a>
+            </div>
         </section>
+
     </main>
 
     <footer>
@@ -89,5 +166,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

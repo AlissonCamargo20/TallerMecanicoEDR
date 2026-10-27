@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conoce la historia, trayectoria y valores de Taller Mecánico EDR.">
+
     <title>Nuestro taller | Taller Mecánico EDR</title>
+
+    <!-- Uso Bootstrap para adaptar mi página a diferentes pantallas -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header>
         <img src="img/logoEDR.png" alt="Logo de Taller Mecánico EDR">
         <h1>Taller Mecánico EDR</h1>
@@ -24,64 +39,140 @@
     </nav>
 
     <main>
-        <section class="introduccion-taller">
-            <h2>Pasión por la mecánica, compromiso con las personas.</h2>
 
-            <p>En Taller Mecánico EDR, más que reparar autos, nos dedicamos a generar confianza. Sabemos que dejar tu vehículo en manos de alguien más no es fácil, por eso nuestra prioridad es siempre atenderte con honestidad y responsabilidad, como si tu coche fuera el nuestro.</p>
+        <section class="introduccion-taller container-fluid">
+            <div class="container">
+                <h2>Pasión por la mecánica, compromiso con las personas.</h2>
 
-            <p>Detrás del nombre EDR hay una historia de esfuerzo y pasión por la mecánica que comenzó hace más de 20 años, con un solo objetivo: ayudar a los demás resolviendo problemas reales con soluciones claras y trabajo bien hecho.</p>
+                <p>
+                    En Taller Mecánico EDR, más que reparar autos, nos dedicamos
+                    a generar confianza. Sabemos que dejar tu vehículo en manos
+                    de alguien más no es fácil, por eso nuestra prioridad es
+                    siempre atenderte con honestidad y responsabilidad,
+                    como si tu coche fuera el nuestro.
+                </p>
+
+                <p>
+                    Detrás del nombre EDR hay una historia de esfuerzo y pasión
+                    por la mecánica que comenzó hace más de 20 años, con un
+                    solo objetivo: ayudar a los demás resolviendo problemas
+                    reales con soluciones claras y trabajo bien hecho.
+                </p>
+            </div>
         </section>
 
-        <section class="historia-taller">
-            <div class="imagen-historia">
-                <img src="img/SeñorEder.png" alt="Eder, mecánico automotriz de Taller Mecánico EDR">
-            </div>
+        <section class="historia-taller container">
+            <div class="row align-items-center g-4">
 
-            <div class="texto-historia">
-                <h2>Compromiso que lidera, trayectoria que respalda</h2>
+                <div class="imagen-historia col-12 col-md-5">
+                    <img
+                        src="img/SeñorEder.png"
+                        alt="Eder, mecánico automotriz de Taller Mecánico EDR"
+                        class="img-fluid"
+                    >
+                </div>
 
-                <p>Mi nombre es Eder, soy mecánico automotriz con más de dos décadas de experiencia, desde que era joven mostré interés por la reparación de autos y con el tiempo ese interés se convirtió en un oficio que me ha permitido tener mi propio negocio, prestar servicio a los clientes que lo solicitan y seguir aprendiendo día a día.</p>
-                <p>“Mi perspectiva ha sido ofrecer a mis clientes un servicio de calidad y garantizado, lo anterior con la finalidad de que estos se conviertan en clientes cautivos los cuales me recomienden con otras personas por el buen servicio que se le otorga.”</p>
+                <div class="texto-historia col-12 col-md-7">
+                    <h2>Compromiso que lidera, trayectoria que respalda</h2>
+
+                    <p>
+                        Mi nombre es Eder, soy mecánico automotriz con más de
+                        dos décadas de experiencia, desde que era joven mostré
+                        interés por la reparación de autos y con el tiempo ese
+                        interés se convirtió en un oficio que me ha permitido
+                        tener mi propio negocio, prestar servicio a los clientes
+                        que lo solicitan y seguir aprendiendo día a día.
+                    </p>
+
+                    <p>
+                        “Mi perspectiva ha sido ofrecer a mis clientes un
+                        servicio de calidad y garantizado, lo anterior con la
+                        finalidad de que estos se conviertan en clientes
+                        cautivos los cuales me recomienden con otras personas
+                        por el buen servicio que se le otorga.”
+                    </p>
+                </div>
+
             </div>
         </section>
 
-        <section class="filosofia-taller">
-            <div class="texto-filosofia">
-                <h2>Nuestros valores</h2>
+        <section class="filosofia-taller container-fluid">
+            <div class="container">
+                <div class="row align-items-center g-4">
 
-                <div class="contenedor-valores">
-                    <article>
-                        <h3>Honestidad</h3>
-                        <p>El valor más importante para nosotros. Siempre diremos la verdad sobre lo que necesita tu auto.</p>
-                    </article>
+                    <div class="texto-filosofia col-12 col-lg-7">
+                        <h2>Nuestros valores</h2>
 
-                    <article>
-                        <h3>Cumplimiento</h3>
-                        <p>Respetamos tu tiempo y nuestras fechas de entrega.</p>
-                    </article>
+                        <div class="contenedor-valores">
+                            <div class="row g-3">
 
-                    <article>
-                        <h3>Calidad</h3>
-                        <p>Cada reparación se hace con cuidado, usando herramientas y técnicas adecuadas.</p>
-                    </article>
+                                <div class="col-12 col-md-6">
+                                    <article class="h-100">
+                                        <h3>Honestidad</h3>
+                                        <p>
+                                            El valor más importante para nosotros.
+                                            Siempre diremos la verdad sobre lo
+                                            que necesita tu auto.
+                                        </p>
+                                    </article>
+                                </div>
 
-                    <article>
-                        <h3>Trato humano</h3>
-                        <p>No solo arreglamos coches, también atendemos personas.</p>
-                    </article>
+                                <div class="col-12 col-md-6">
+                                    <article class="h-100">
+                                        <h3>Cumplimiento</h3>
+                                        <p>
+                                            Respetamos tu tiempo y nuestras
+                                            fechas de entrega.
+                                        </p>
+                                    </article>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <article class="h-100">
+                                        <h3>Calidad</h3>
+                                        <p>
+                                            Cada reparación se hace con cuidado,
+                                            usando herramientas y técnicas adecuadas.
+                                        </p>
+                                    </article>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <article class="h-100">
+                                        <h3>Trato humano</h3>
+                                        <p>
+                                            No solo arreglamos coches,
+                                            también atendemos personas.
+                                        </p>
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="imagen-filosofia col-12 col-lg-5">
+                        <img
+                            src="img/Herramientas.png"
+                            alt="Herramientas utilizadas en el trabajo mecánico"
+                            class="img-fluid"
+                        >
+                    </div>
+
                 </div>
             </div>
+        </section>
 
-            <div class="imagen-filosofia">
-                <img src="img/Herramientas.png" alt="Herramientas utilizadas en el trabajo mecánico">
+        <section class="invitacion-taller container-fluid">
+            <div class="container">
+                <h2>¿Necesitas ayuda con tu vehículo?</h2>
+                <p>
+                    Estamos para atenderte con honestidad, experiencia y compromiso.
+                </p>
+                <a href="servicios.html">Conoce nuestros servicios</a>
             </div>
         </section>
 
-        <section class="invitacion-taller">
-            <h2>¿Necesitas ayuda con tu vehículo?</h2>
-            <p>Estamos para atenderte con honestidad, experiencia y compromiso.</p>
-            <a href="servicios.html">Conoce nuestros servicios</a>
-        </section>
     </main>
 
     <footer>
@@ -92,5 +183,8 @@
 
         <p>Pasión por la mecánica, compromiso con las personas.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contacta a Taller Mecánico EDR para conocer nuestros servicios.">
+
     <title>Contacto | Taller Mecánico EDR</title>
+
+    <!-- Uso Bootstrap para adaptar mi página a diferentes pantallas -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <header>
         <img src="img/logoEDR.png" alt="Logo de Taller Mecánico EDR">
         <h1>Taller Mecánico EDR</h1>
@@ -25,93 +39,106 @@
     </nav>
 
     <main>
-        <section class="introduccion-contacto">
-            <h2>Contáctanos</h2>
-            <p>
-                ¿Tu automóvil necesita atención? Comunícate con nosotros
-                para resolver tus dudas y conocer los servicios que ofrecemos.
-            </p>
+
+        <section class="introduccion-contacto container-fluid">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>
+                    ¿Tu automóvil necesita atención? Comunícate con nosotros
+                    para resolver tus dudas y conocer los servicios que ofrecemos.
+                </p>
+            </div>
         </section>
 
-        <section class="contenido-contacto">
+        <section class="contenido-contacto container">
+            <div class="row align-items-start g-4">
 
-            <div class="informacion-contacto">
-                <h2>Información de contacto</h2>
-
-                <p>
-                    En Taller Mecánico EDR queremos brindarte una atención
-                    cercana y honesta. Puedes comunicarte con nosotros para
-                    solicitar información sobre el mantenimiento o la
-                    reparación de tu vehículo.
-                </p>
-
-                <p>
-                    <strong>Teléfono:</strong> 773 133 9821
-                </p>
-
-                <p>
-                    <strong>Correo electrónico:</strong>
-                    edergs1101@gmail.com
-                </p>
-
-                <p>
-                    <strong>Horario:</strong>
-                    Lunes a sábado, de 9:00 a. m. a 6:00 p. m.
-                </p>
-
-                <p>
-                    <strong>Dirección:</strong>
-                    Av. Francisco I. Madero 249, zona de Mangas,
-                    Tezontepec, Hidalgo.
-                </p>
-
-                <div class="mapa-taller">
-                    <h2>Ubicación del taller</h2>
-
-                    <iframe
-                        src="https://maps.google.com/maps?q=20.181090,-99.242596&z=18&output=embed"
-                        title="Ubicación de Taller Mecánico EDR"
-                        width="100%"
-                        height="250"
-                        style="border: 0;"
-                        allowfullscreen
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div class="informacion-contacto col-12 col-lg-7">
+                    <h2>Información de contacto</h2>
 
                     <p>
-                        <a
-                            href="https://maps.app.goo.gl/29jFXfiskb1jPUf4A"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            Abrir ubicación en Google Maps
-                        </a>
+                        En Taller Mecánico EDR queremos brindarte una atención
+                        cercana y honesta. Puedes comunicarte con nosotros para
+                        solicitar información sobre el mantenimiento o la
+                        reparación de tu vehículo.
                     </p>
+
+                    <p>
+                        <strong>Teléfono:</strong>
+                        <a href="tel:+527731339821">773 133 9821</a>
+                    </p>
+
+                    <p>
+                        <strong>Correo electrónico:</strong>
+                        <a href="mailto:edergs1101@gmail.com">edergs1101@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <strong>Horario:</strong>
+                        Lunes a sábado, de 9:00 a. m. a 6:00 p. m.
+                    </p>
+
+                    <p>
+                        <strong>Dirección:</strong>
+                        Av. Francisco I. Madero 249, zona de Mangas,
+                        Tezontepec, Hidalgo.
+                    </p>
+
+                    <div class="mapa-taller">
+                        <h2>Ubicación del taller</h2>
+
+                        <iframe
+                            src="https://maps.google.com/maps?q=20.181090,-99.242596&z=18&output=embed"
+                            title="Ubicación de Taller Mecánico EDR"
+                            width="100%"
+                            height="377"
+                            style="border: 0;"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                        <p>
+                            <a
+                                href="https://maps.app.goo.gl/29jFXfiskb1jPUf4A"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Abrir ubicación en Google Maps
+                            </a>
+                        </p>
+                    </div>
                 </div>
+
+                <div class="imagenes-contacto col-12 col-lg-5">
+                    <img
+                        src="img/nose.png"
+                        alt="Pieza automotriz utilizada en trabajos mecánicos"
+                        class="img-fluid"
+                    >
+
+                    <img
+                        src="img/kevin.png"
+                        alt="Kevin trabajando con herramientas y piezas del taller"
+                        class="img-fluid"
+                    >
+                </div>
+
             </div>
-
-            <div class="imagenes-contacto">
-                <img
-                    src="img/nose.png"
-                    alt="Pieza automotriz utilizada en trabajos mecánicos">
-
-                <img
-                    src="img/kevin.png"
-                    alt="Kevin trabajando con herramientas y piezas del taller">
-            </div>
-
         </section>
 
-        <section class="mensaje-contacto">
-            <h2>Estamos para ayudarte</h2>
+        <section class="mensaje-contacto container-fluid">
+            <div class="container">
+                <h2>Estamos para ayudarte</h2>
 
-            <p>
-                En Taller Mecánico EDR trabajamos con pasión por la
-                mecánica y compromiso con las personas.
-            </p>
+                <p>
+                    En Taller Mecánico EDR trabajamos con pasión por la
+                    mecánica y compromiso con las personas.
+                </p>
 
-            <a href="cotizador.html">Solicitar una cotización</a>
+                <a href="cotizador.html">Solicitar una cotización</a>
+            </div>
         </section>
+
     </main>
 
     <footer>
@@ -124,5 +151,8 @@
             Pasión por la mecánica, compromiso con las personas.
         </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
